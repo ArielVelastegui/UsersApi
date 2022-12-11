@@ -105,10 +105,10 @@ h1,h2,h3{
 }
 
 h1{
-  margin-top: 40px;
+  margin-top: 20px;
   -webkit-text-stroke: #000 2px;
   color: transparent;
 }
 body{
-  max-width: 1024px;
+  padding: 30px;
 }
