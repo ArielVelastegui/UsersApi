@@ -10,7 +10,7 @@ function App() {
   const [openForm, setOpenForm] = useState(false)
 
   const getAllUsers = () => {
-    const Url = 'http://users-crud.academlo.tech/users/'
+    const Url = 'https://users-crud.academlo.tech/users/'
     axios.get(Url)
     .then(res=>setUsers(res.data))
     .catch(err=>console.log(err))
@@ -18,7 +18,7 @@ function App() {
 
   const createNewUser = data => {
 
-    const Url = 'http://users-crud.academlo.tech/users/'
+    const Url = 'https://users-crud.academlo.tech/users/'
     axios.post(Url,data)
     .then(res=>{console.log(res.data)
     getAllUsers()
@@ -27,7 +27,7 @@ function App() {
   }
 
   const deleteUserbyId = (id)=>{
-    const Url = `http://users-crud.academlo.tech/users/${id}/`
+    const Url = `https://users-crud.academlo.tech/users/${id}/`
     axios.delete(Url)
     .then(res=>{console.log(res.data)
     getAllUsers()
@@ -36,7 +36,7 @@ function App() {
   }
 
   const updateUserbyId = (id,data) => {
-    const Url = `http://users-crud.academlo.tech/users/${id}/`
+    const Url = `https://users-crud.academlo.tech/users/${id}/`
     axios.put(Url,data)
     .then(res=>{getAllUsers()})
     .catch(err=>console.log(err))
